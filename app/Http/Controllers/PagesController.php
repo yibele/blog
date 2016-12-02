@@ -1,32 +1,28 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Post;
 /**
-* 
+*
 */
 class PagesController extends Controller
 {
 	public function getIndex() {
+		$post = Post::orderBy('created_at','desc')->limit(4)->get();
+		return view('pages.welcome')->withPost($post);
 		
-		#process variable data or params
-		#talk ot the model
-		#recieve from the model
-		#compile or process data from the model if needed
-		#pass that data to the correct view
-		return view('pages.welcome');
 	}
 
 	public function getAbout() {
 		$first = 'yibu';
 		$last = 'gele';
 		$fullname = $first . " " . $last;
-		
+
 		return view('pages.about',compact('fullname'));
 	}
 
 	public function getContact() {
-		return view('pages.contact');	
+		return view('pages.contact');
 	}
 
 }

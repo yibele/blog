@@ -17,7 +17,7 @@ class PostController extends Controller
     public function index()
     {
         //create a varible and store all the blog postsi in it from the databases
-        $posts = Post::paginate(10);
+        $posts = Post::orderBy('id','desc')->paginate(10);
         //return a view and pass in the above variable
         return view('posts.index')->withPost($posts);
     }
@@ -97,11 +97,11 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //Validate the data 
+        //Validate the data
         $this->validate($request,array(
                 'title'=> 'required|max:255',
                 'body' => 'required'
-            ));        
+            ));
 
         //save the data to the form
         $post = Post::find($id);

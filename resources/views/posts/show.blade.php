@@ -3,7 +3,7 @@
 @section('title','| View Post')
 
 @section('body')
-	
+
 	<div class="row">
 		<div class="col-md-8">
 			<h1>{{ $post->title }}</h1>
@@ -27,9 +27,18 @@
 					<div class="col-sm-6">
 						{!! Form::open(['route'=>['post.destroy',$post->id],'method'=>'DELETE']) !!}
 						{!! Form::submit('Delete',['class'=>'btn btn-danger btn-block']) !!}
-						{!! Form::close() !!}				
-						</div>
+						{!! Form::close() !!}
+					</div>
+					<div class="row">
+					<div class="col-sm-12">
+						<a href="{{route('post.index')}}" class="btn btn-default btn-block defaul-spacing">
+							<< Show All Posts
+						</a>
+					</div>
+					
 
+
+					</div>
 				</div>
 
 
