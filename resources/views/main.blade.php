@@ -9,6 +9,6 @@
 	</div>
 
 @include('partials._javascript')
-@yield('script') 
+@yield('script')
   </body>
 </html>

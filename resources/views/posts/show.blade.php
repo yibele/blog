@@ -12,12 +12,16 @@
 		<div class="col-md-4">
 			<div class="well">
 				<dl class="dl-horizontal">
-					<dt>Create At:</dt>
-					<dd>{{$post->created_at}}</dd>
+					<label>Create At:</label>
+					<p>{{$post->created_at}}</p>
 				</dl>
 				<dl class="dl-horizontal">
-					<dt>Last Updated:</dt>
-					<dd>{{$post->updated_at}}</dd>
+					<label>Last Updated:</label>
+					<p>{{$post->updated_at}}</p>
+				</dl>
+				<dl class="dl-horizontal">
+					<label>Url:</label>
+					<p><a href="{{ url($post->slug) }}">{{url('$post->slug')}}</a><p>
 				</dl>
 				<hr>
 				<div class="row">
@@ -35,7 +39,7 @@
 							<< Show All Posts
 						</a>
 					</div>
-					
+
 
 
 					</div>
