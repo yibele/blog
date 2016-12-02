@@ -27,9 +27,9 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
+              <li><a href="{{route('post.index')}}">Posts</a></li>
               <li class="divider"></li>
-              <li><a href="#">Logout</a></li>
+              <li><a href="{{route('logout')}}">Logout</a></li>
             </ul>
           </li>
         </ul>

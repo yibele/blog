@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laravel Blog @yield('title')</title>
     {{ Html::style('css/style.css')}}
-    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    {{-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"> --}}
+    <link href="/css/app.css" rel="stylesheet">
     @yield('stylesheets')
 </head>
