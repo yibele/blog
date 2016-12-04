@@ -36,8 +36,8 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav> --}}
-<nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container-fluid">
         <div class="navbar-header">
 
             <!-- Collapsed Hamburger -->
@@ -50,13 +50,14 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name','Laravel Blog') }}
+                Laravel Blog
             </a>
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
+                <li class="{{ Request::is('blog') ? "active" :"" }}"><a href="/">Home</a></li>
                 <li class="{{ Request::is('blog') ? "active" :"" }}"><a href="/blog">Blog</a></li>
                <li class="{{ Request::is('about') ? "active" :"" }}"><a href="/about">About</a></li>
                <li class="{{ Request::is('contact') ? "active" :"" }}"><a href="/contact">Contact</a></li>
