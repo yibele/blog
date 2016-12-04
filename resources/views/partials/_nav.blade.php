@@ -76,6 +76,7 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{url('post')}}">Posts</a></li>
+                            <li><a href="{{route('categories.index')}}">Categories</a></li>
                             <li class="divider"></li>
                             <li>
                                 <a href="{{ url('/logout') }}"

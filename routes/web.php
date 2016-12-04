@@ -22,9 +22,11 @@ Route::resource('post','PostController');
 
 Route::get('blog/{slug}',['as' => 'blog.single',
 'uses'=>'BlogController@getSingle'])->where('slug','[\w\d\-\_]+');
-
+//Auth
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
 Route::get('logout','Auth\LoginController@logout');
+//Category
+Route::resource('categories','CategoryController',['except'=>'create']);

@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offste-2">
             <h2>{{$v->title}}</h2>
-            <h5>Published: {{$v->create_at}}</h5>
+            <h5>Published At: {{$v->created_at}}</h5>
 
             <p>{{substr($v->body,0,250)}}{{ strlen($v->body)>250 ? "...":""}}</p>
 

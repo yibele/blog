@@ -3,7 +3,7 @@
 	@include('partials._nav')
 	<div class="container">
 	@include('partials._messages')
-	{{ Auth::check() ? "Loggeg In" :"Logged Out" }}
+	{{-- {{ Auth::check() ? "Loggeg In" :"Logged Out" }} --}}
 
 	@yield('body')
 	@include('partials._footer')
